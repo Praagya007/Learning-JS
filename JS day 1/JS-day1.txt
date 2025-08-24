@@ -39,4 +39,4 @@ Step Over gives control to run code one line at a time.
 
 Watch Expressions are a powerful way to inspect variable values and debug logic.
 
-Even though these seem advanced, they are basic tools to understand how code flows.
+Even though these seem advanced, they are basic tools and are important to understand how code flows.
