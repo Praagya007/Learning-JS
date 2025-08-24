@@ -58,23 +58,27 @@ var greet = function() {
 Only the var is hoisted (as undefined), not the function body.
 
 </details>
+
 <details> <summary>🔹 Type Coercion</summary> <br>
+
 Implicit Coercion
 JavaScript automatically converts types:
 
 '5' + 1     // "51" → string
 '5' - 1     // 4    → number
 true + 1    // 2
+
+
 Explicit Coercion
 You convert it manually:
 
 Number("10")  // 10
 String(123)   // "123"
+
 </details>
 <details> <summary>🔹 Truthy & Falsy Values</summary> <br>
 
-
-Falsy Values behave like false in conditions:
+Falsy values behave like false in conditions:
 
 0
 
@@ -98,11 +102,10 @@ Operator	Description	Example	Result
 
 Special Cases
 
-js
-Copy code
 false == 0          // true
 false === 0         // false
 
 null == undefined   // true
 null === undefined  // false
+
 </details> ```
