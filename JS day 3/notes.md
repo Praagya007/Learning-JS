@@ -52,10 +52,6 @@ function sayHello() {
 Fully hoisted: the entire function is available before its definition.
 
 ❌ Function Expressions
-
-js
-Copy
-Edit
 // greet(); // TypeError
 
 var greet = function() {
