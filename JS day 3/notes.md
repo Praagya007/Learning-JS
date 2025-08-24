@@ -38,6 +38,7 @@ A collection of notes and code snippets covering Day 3 concepts in JavaScript le
 ---
 
 <details>
+<details>
 <summary>🔹 Hoisting</summary>
 
 <br>
@@ -61,10 +62,8 @@ Only the var is hoisted (as undefined), not the function body.
 
 </details>
 <details> <summary>🔹 Type Coercion</summary> <br>
-
 Implicit Coercion
 JavaScript automatically converts types:
-
 '5' + 1     // "51" → string
 '5' - 1     // 4    → number
 true + 1    // 2
