@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 02 Practice</title>
+</head>
+<body>
+    <h1>Open your browser console (F12)</h1>
+
+    <script>
+        // 1. Reverse a String
+        function reverseString(str) {
+            return str.split('').reverse().join('');
+        }
+
+        const originalStr = "improving";
+        console.log(`The reverse of ${originalStr} is ${reverseString(originalStr)}.`);
+
+        // 2. Count Vowels in a String
+        function countVowels(str) {
+            const vowels = "aeiouAEIOU";
+            let count = 0;
+            for (const char of str) {
+                if (vowels.includes(char)) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        const musicTitle = "Mitwa Full Video, KANK - Shahrukh Khan,Rani Mukherjee|Shafqat Amanat Ali|Shankar Mahadevan";
+        console.log(`The number of vowels in musicTitle is ${countVowels(musicTitle)}.`);
+
+        // 3. Sum an Array
+        function sumArray(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
+        }
+
+        const numArray = [1, 2, 3, 5];
+        console.log(`The sum of the array is ${sumArray(numArray)}.`);
+
+        // 4. Typeof Practice
+        console.log("---- typeof practice ----");
+        console.log(typeof 123);              // number
+        console.log(typeof "hello");         // string
+        console.log(typeof true);            // boolean
+        console.log(typeof undefined);       // undefined
+        console.log(typeof null);            // object (quirk)
+        console.log(typeof []);              // object (array)
+        console.log(typeof {});              // object
+        console.log(typeof function() {});   // function
+        console.log(typeof Symbol("x"));     // symbol
+        console.log(typeof 10n);             // bigint
+
+        // 5. Operator Tests
+        console.log("---- operator tests ----");
+        console.log('5' + 1);       // "51"
+        console.log('5' - 1);       // 4
+        console.log('5' * '2');     // 10
+        console.log(true + false);  // 1
+        console.log(!false || false && true); // true
+    </script>
+</body>
+</html>
