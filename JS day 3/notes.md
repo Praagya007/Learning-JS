@@ -59,7 +59,8 @@ Only the var is hoisted (as undefined), not the function body.
 
 </details>
 
-<details> <summary>🔹 Type Coercion</summary> <br>
+<details> 
+<summary>🔹 Type Coercion</summary> <br>
 
 Implicit Coercion
 JavaScript automatically converts types:
@@ -76,7 +77,8 @@ Number("10")  // 10
 String(123)   // "123"
 
 </details>
-<details> <summary>🔹 Truthy & Falsy Values</summary> <br>
+<details> 
+<summary>🔹 Truthy & Falsy Values</summary> <br>
 
 Falsy values behave like false in conditions:
 
@@ -95,7 +97,8 @@ false
 Everything else is truthy.
 
 </details>
-<details> <summary>🔹 Equality: <code>==</code> vs <code>===</code></summary> <br>
+<details> 
+<summary>🔹 Equality: <code>==</code> vs <code>===</code></summary> <br>
 Operator	Description	Example	Result
 ==	Loose (coerces types)	'5' == 5	true
 ===	Strict (no coercion)	'5' === 5	false
