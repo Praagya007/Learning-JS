@@ -1,42 +1,57 @@
-🧠 Statement vs Expression
+# 📅 JavaScript — Day 1: Statements, Expressions & Debugging
 
-✅ Statement
-A statement is a complete instruction that performs an action. It doesn't necessarily return a value.
+A quick overview of fundamental JavaScript concepts including the difference between statements and expressions, and debugging tools in developer tools.
 
-Example:
-let x = 5; ← This is a variable declaration (a statement)
+---
 
+## 🧠 Statement vs Expression
+
+### ✅ Statement
+A **statement** is a complete instruction that performs an action. It doesn't necessarily return a value.
+
+**Example:**
+```js
+let x = 5; // This is a variable declaration (a statement)
 ✅ Expression
 An expression is any code that produces a value. Expressions can be used inside statements.
 
 Example:
-x + 3 ← This is an expression. It evaluates to 8 (if x = 5)
 
-Example inside a statement:
-let y = x + 3; ← The expression (x + 3) is used inside a statement
+js
+Copy code
+x + 3 // This is an expression. It evaluates to 8 if x = 5
+Used inside a statement:
 
+js
+Copy code
+let y = x + 3; // The expression (x + 3) is used inside a statement
 🛠️ Debugging in JavaScript
-
 🔹 What is a Breakpoint?
 A breakpoint is a marker you set in your code to pause execution at a specific line.
-This lets you see how your code is running, step-by-step.
-You can pause before or after certain lines to check variable values or logic.
+
+Lets you inspect variables and control flow step-by-step.
+
+Set in browser dev tools or editors like VS Code.
 
 🔹 What is Step Over?
-"Step Over" means running the current line and moving to the next one, without entering functions.
-Useful for going through logic quickly without diving deep into every function call.
+Step Over runs the current line and moves to the next, without entering functions.
+
+Useful for skipping over internal details of functions.
+
+Keeps focus on higher-level logic.
 
 🔹 What is a Watch Expression?
-A watch expression lets you track the value of a variable (or any expression) while the code is paused.
-Helps you see how variables change as the code runs.
-You can add expressions like x, y, or even x * y.
+A watch expression tracks the value of a variable (or any expression) while code is paused.
+
+Lets you monitor how variables change during execution.
+
+Examples: x, y, x * y, user.name
 
 🧪 What I Learned
-
 Breakpoints help visualize how JavaScript runs.
 
 Step Over gives control to run code one line at a time.
 
-Watch Expressions are a powerful way to inspect variable values and debug logic.
+Watch Expressions are powerful tools for inspecting logic and variables.
 
-Even though these seem advanced, they are basic tools and are important to understand how code flows.
+These debugging tools are essential for understanding code flow — not just advanced, but fundamental.
