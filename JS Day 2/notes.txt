@@ -1,0 +1,48 @@
+📅 Day 02 — JavaScript Basics Deep Dive
+
+✅ Topics Covered:
+
+1. Primitives vs Objects
+-------------------------
+• Primitives: number, string, boolean, null, undefined, bigint, symbol
+• Immutable, copied by value, stored in stack memory
+• typeof gives basic type — with some quirks (typeof null === "object")
+
+• Objects: arrays, functions, plain objects
+• Mutable, copied by reference, stored in heap memory
+• typeof returns "object" or "function"
+
+2. typeof Operator
+-------------------
+Tested typeof on:
+• number, string, boolean, undefined, null (quirk), array, object, function, symbol, bigint
+
+3. Operators
+------------
+• Arithmetic: +, -, *, /, %, **
+• Comparison: ==, ===, !=, !==, >, <, >=, <=
+• Logical: &&, ||, !
+
+Notes:
+- == does type coercion
+- === checks both value and type
+- Operator precedence matters (e.g., ! > && > ||)
+
+4. String Methods
+------------------
+• .toUpperCase()
+• .toLowerCase()
+• .includes()
+• .slice(start, end)
+• .split(separator)
+• .join(separator)
+• .length
+
+5. Practice Code Written:
+--------------------------
+• Reverse a string using split-reverse-join
+• Count vowels in a string using for...of loop
+• Sum elements of an array using a for loop
+• Console tests with typeof and logical expressions
+
+
