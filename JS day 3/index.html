@@ -1,0 +1,72 @@
+<!-- Variables: var, let, const -->
+  <script>
+    // var is hoisted and initialized with undefined
+    console.log(myVar); // undefined
+    var myVar = 10;
+
+    // let and const are hoisted but in TDZ (Temporal Dead Zone)
+    // console.log(myLet); // ReferenceError
+    let myLet = 20;
+
+    // const must be declared and initialized at once
+    const myConst = 30;
+  </script>
+
+  <!-- Temporal Dead Zone -->
+  <script>
+    {
+      // console.log(msg); // ReferenceError due to TDZ
+      let msg = "Hello TDZ";
+      console.log(msg); // Works after declaration
+    }
+  </script>
+
+  <!-- Function Hoisting -->
+  <script>
+    sayHi(); // "Hi there!"
+
+    function sayHi() {
+      console.log("Hi there!");
+    }
+  </script>
+
+  <!-- Function Expression Hoisting -->
+  <script>
+    // greet(); // TypeError: greet is not a function
+    var greet = function() {
+      console.log("Hello again!");
+    };
+  </script>
+
+  <!-- Type Coercion -->
+  <script>
+    console.log("5" + 1); // "51" (string)
+    console.log("5" - 1); // 4 (number)
+    console.log(true + 1); // 2
+    console.log(Number("10")); // 10
+    console.log(String(123)); // "123"
+  </script>
+
+  <!-- Truthy & Falsy -->
+  <script>
+    console.log(Boolean(0)); // false
+    console.log(Boolean("")); // false
+    console.log(Boolean(undefined)); // false
+    console.log(Boolean(null)); // false
+    console.log(Boolean(NaN)); // false
+    console.log(Boolean(false)); // false
+    console.log(Boolean("hello")); // true
+    console.log(Boolean(1)); // true
+  </script>
+
+  <!-- Equality (== vs ===) -->
+  <script>
+    console.log("5" == 5);  // true (coerced)
+    console.log("5" === 5); // false (strict)
+
+    console.log(false == 0);  // true
+    console.log(false === 0); // false
+
+    console.log(null == undefined);  // true
+    console.log(null === undefined); // false
+  </script>
