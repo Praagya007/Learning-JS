@@ -38,13 +38,11 @@ A collection of notes and code snippets covering Day 3 concepts in JavaScript le
 ---
 
 <details>
-<details>
 <summary>🔹 Hoisting</summary>
 
 <br>
 
 ✅ **Function Declarations**  
-```js
 sayHello(); // "Hello!"
 
 function sayHello() {
@@ -61,7 +59,9 @@ var greet = function() {
 Only the var is hoisted (as undefined), not the function body.
 
 </details>
-<details> <summary>🔹 Type Coercion</summary> <br>
+---
+<details> 
+<summary>🔹 Type Coercion</summary> <br>
 Implicit Coercion
 JavaScript automatically converts types:
 '5' + 1     // "51" → string
@@ -73,7 +73,9 @@ You convert it manually:
 Number("10")  // 10
 String(123)   // "123"
 </details>
-<details> <summary>🔹 Truthy & Falsy Values</summary> <br>
+---
+<details> 
+<summary>🔹 Truthy & Falsy Values</summary> <br>
 Falsy values behave like false in conditions:
 
 0
@@ -102,4 +104,4 @@ false === 0         // false
 
 null == undefined   // true
 null === undefined  // false
-</details> ```
+</details> 
