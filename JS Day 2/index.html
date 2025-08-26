@@ -35,12 +35,12 @@
         function sumArray(arr) {
             let sum = 0;
             for (let i = 0; i < arr.length; i++) {
-                sum += arr[i];
+                sum += Number(arr[i]);
             }
             return sum;
         }
 
-        const numArray = [1, 2, 3, 5];
+        const numArray = [1, 2, "3", 5];
         console.log(`The sum of the array is ${sumArray(numArray)}.`);
 
         // 4. Typeof Practice
