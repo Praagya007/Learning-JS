@@ -10,7 +10,8 @@ A structured recap of core JavaScript concepts: primitives, the `typeof` operato
 
 ### 1. Primitives vs Objects
 
-**🔹 Primitives:**
+#### 🔹 Primitives
+
 - Types: `number`, `string`, `boolean`, `null`, `undefined`, `bigint`, `symbol`
 - Immutable
 - Copied by value
@@ -18,7 +19,8 @@ A structured recap of core JavaScript concepts: primitives, the `typeof` operato
 - `typeof` returns basic type  
   ⚠️ **Quirk**: `typeof null === "object"`
 
-**🔹 Objects:**
+#### 🔹 Objects
+
 - Types: arrays, functions, plain objects
 - Mutable
 - Copied by reference
@@ -42,52 +44,85 @@ typeof {}            // "object"
 typeof function(){}  // "function"
 typeof Symbol()      // "symbol"
 typeof 10n           // "bigint"
-3. Operators
-🔹 Arithmetic:
-+, -, *, /, %, **
+```
 
-🔹 Comparison:
-==, ===, !=, !==, >, <, >=, <=
+---
 
-== does type coercion
+### 3. Operators
 
-=== checks value + type
+#### 🔹 Arithmetic
 
-🔹 Logical:
-&&, ||, !
+```js
++ , - , * , / , % , **
+```
 
-Operator precedence matters: ! > && > ||
+#### 🔹 Comparison
 
-4. String Methods
+```js
+== , === , != , !== , > , < , >= , <=
+```
+
+- `==` does type coercion  
+- `===` checks value **and** type
+
+#### 🔹 Logical
+
+```js
+&& , || , !
+```
+
+- Operator precedence matters: `!` > `&&` > `||`
+
+---
+
+### 4. String Methods
+
 Common methods practiced:
 
-js
-Copy code
-"hello".toUpperCase()      // "HELLO"
-"HELLO".toLowerCase()      // "hello"
-"test".includes("es")      // true
-"javascript".slice(0, 4)   // "java"
-"hi there".split(" ")      // ["hi", "there"]
-["a", "b"].join("-")       // "a-b"
-"openai".length            // 6
+```js
+"hello".toUpperCase();       // "HELLO"
+"HELLO".toLowerCase();       // "hello"
+"test".includes("es");       // true
+"javascript".slice(0, 4);    // "java"
+"hi there".split(" ");       // ["hi", "there"]
+["a", "b"].join("-");        // "a-b"
+"openai".length;             // 6
+```
 
-5. Practice Code Written
-✅ Reverse a string:
+---
+
+### 5. Practice Code Written
+
+#### ✅ Reverse a string
+
+```js
 let str = "hello";
 let reversed = str.split("").reverse().join(""); // "olleh"
+```
 
-✅ Count vowels:
+#### ✅ Count vowels
+
+```js
 let count = 0;
 for (let char of "hello") {
   if ("aeiou".includes(char)) count++;
 }
+```
 
-✅ Sum array elements:
+#### ✅ Sum array elements
+
+```js
 let sum = 0;
 let arr = [1, 2, 3];
 for (let num of arr) sum += num;
-✅ typeof and logic testing:
+```
 
+#### ✅ `typeof` and logic testing
+
+```js
 typeof null;        // "object"
 true && false;      // false
 !true || true;      // true
+```
+
+---
