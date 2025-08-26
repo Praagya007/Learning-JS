@@ -87,12 +87,4 @@ isPalindrome("chatgpt") // false
 - `break` stops the loop entirely.
 - `continue` skips current iteration, continues to next.
 
-<details>
-<summary>💡 Pro Tips</summary>
 
-- Always prefer `===` instead of `==` inside conditions.  
-- Avoid using `for...in` on arrays → it iterates over keys, not values.  
-- Use `for...of` for cleaner, more modern code when working with arrays/strings.  
-- Factorial can be written recursively, but iterative is more memory-friendly.  
-
-</details>
