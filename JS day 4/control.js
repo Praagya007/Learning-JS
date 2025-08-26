@@ -1,25 +1,15 @@
 // FizzBuzz
-function fizzBuzz() {
-  for (let i = 1; i <= 20; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log("FizzBuzz");
-    } else if (i % 3 === 0) {
-      console.log("Fizz");
-    } else if (i % 5 === 0) {
-      console.log("Buzz");
-    } else {
-      console.log(i);
-    }
-  }
+function fizzBuzz(n) {
+    if (n % 15 === 0) return "FizzBuzz";
+    if (n % 3 === 0) return "Fizz";
+    if (n % 5 === 0) return "Buzz";
+    return n;
 }
 
 // Factorial
 function factorial(n) {
-  let result = 1;
-  for (let i = 2; i <= n; i++) {
-    result *= i;
-  }
-  return result;
+    if (n === 0) return 1;
+    return n * factorial(n - 1);
 }
 
 // Fibonacci
