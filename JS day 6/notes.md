@@ -75,25 +75,26 @@ Sometimes we just want a function to run immediately and not pollute the global 
 --- 
 ## 🧑‍🤝‍🧑 this Basics + call/apply/bind
 
-this usually refers to the object that calls the function.
-
-Sometimes we want to control what this is.
+- this usually refers to the object that calls the function.
+- Sometimes we want to control what this is.
 
 ### call
 
 - Calls immediately, pass arguments one by one.
+---
 ```javascript
 introduce.call(user1, "Kathmandu", "Nepal");
 ```
 
 ### apply
-
+---
 - Calls immediately, pass arguments as an array.
 ```javascript
 introduce.apply(user2, ["Beijing", "China"]);
 ```
 
 ### bind
+---
 - Does not call immediately, returns a new function we can call later.
 ```javascript
 let introLater = introduce.bind(user3, "Athens", "Greece");
