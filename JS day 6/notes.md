@@ -61,3 +61,15 @@ console.log(counter.inc());    // 2
 console.log(counter.dec());    // 1
 console.log(counter.reset());  // 0
 ```
+--- 
+## ⚡ IIFE (Immediately Invoked Function Expression)
+
+Sometimes we just want a function to run immediately and not pollute the global scope.
+### Example:
+```javascript
+(function () {
+    let name = "James";
+    console.log(`Good Morning, ${name}.`);
+})();
+```
+--- 
