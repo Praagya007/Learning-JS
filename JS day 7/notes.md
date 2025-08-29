@@ -67,5 +67,6 @@
 > let str = "hello";
 > console.log(Array.from(str)); // ['h','e','l','l','o']
 > ```
-
-🛠️ Functions Implemented
+---
+### 🛠️ Functions Implemented
+- Refer to [array-basics.js](./array-basics.js) for the implementation.
