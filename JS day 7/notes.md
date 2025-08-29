@@ -1,48 +1,43 @@
-# Day 08 — Arrays Basics
+# 📘 Day 08 — Arrays Basics
 
-## 📌 Overview
+## ✅ Concepts Learned
 
-This day focused on learning the fundamentals of working with arrays in JavaScript.
+> #### 1. Creating, Reading & Updating Arrays
+>
+> - Arrays store ordered collections of values.
+> - Example:
+> 
+> ```js
+> let numbers = [1, 2, 3];
+> console.log(numbers[0]); // 1
+> numbers[1] = 42; // update
+> ```
 
-### Covered Topics:
-- Creating, reading, and updating arrays.
-- Common array operations: `push`, `pop`, `shift`, `unshift`.
-- Differences between `slice` vs `splice`.
-- Iterating with `for`, `for...of`, and `Array.from`.
+> #### 2. Adding & Removing Elements
+> 
+> - `push()` → add at the end  
+> - `pop()` → remove last  
+> - `shift()` → remove first  
+> - `unshift()` → add at the start  
+> 
+> ```js
+> let arr = [1, 2, 3];
+> arr.push(4);    // [1, 2, 3, 4]
+> arr.pop();      // [1, 2, 3]
+> arr.shift();    // [2, 3]
+> arr.unshift(0); // [0, 2, 3]
+> ```
 
-To practice, a few small utility functions were implemented.
-
-## 🛠️ Implemented Functions
-
-### `min(arr)`
-Returns the minimum value in an array.
-```js
-min([3, 1, 4]); // 1
-```
-### `max(arr)`
-Returns the maximum value in an array.
-```js
-max([3, 1, 4]); // 4
-```
-### `chunk(array, size)`
-Splits an array into subarrays of a given size.
-```js
-chunk([1, 2, 3, 4, 5], 2); // [[1,2],[3,4],[5]]
-```
-### `flattenOneLevel(arr)`
-Flattens an array by one level (shallow flatten).
-```js
-flattenOneLevel([1, [2, 3], [4], 5]); // [1, 2, 3, 4, 5]
-```
----
-## ✅ Tests & Output
-
-```bash
-> node arrays-basic.js
-1
-4
-[ [1,2], [3,4], [5] ]
-[ 1, 2, 3, 4, 5 ]
-```
-
-
+> ---
+> 
+> #### 3. Slice vs Splice
+> 
+> - `slice(start, end)` → returns a shallow copy (does not change original).
+> - `splice(start, deleteCount, ...items)` → modifies the original array.
+> 
+> ```js
+> let arr = [1, 2, 3, 4];
+> console.log(arr.slice(1, 3)); // [2, 3]
+> arr.splice(1, 2, 99); 
+> console.log(arr); // [1, 99, 4]
+> ```
