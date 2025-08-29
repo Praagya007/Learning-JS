@@ -41,3 +41,31 @@
 > arr.splice(1, 2, 99); 
 > console.log(arr); // [1, 99, 4]
 > ```
+
+> ---
+> 
+> #### 4. Iteration
+> 
+> - `for` loop  
+> - `for...of` loop  
+> - `Array.from()` → useful to convert array-like objects
+> 
+> ```js
+> let arr = [10, 20, 30];
+> 
+> // for loop
+> for (let i = 0; i < arr.length; i++) {
+>   console.log(arr[i]);
+> }
+> 
+> // for...of
+> for (let val of arr) {
+>   console.log(val);
+> }
+> 
+> // Array.from
+> let str = "hello";
+> console.log(Array.from(str)); // ['h','e','l','l','o']
+> ```
+
+🛠️ Functions Implemented
