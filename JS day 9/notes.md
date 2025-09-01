@@ -27,4 +27,4 @@
 ## 📂 Code Reference
 
 You can run all code examples in this folder:  
-[Day10 Objects Summary](./day10_objects_summary.js)
+[objects.js](./day10_objects_summary.js)
