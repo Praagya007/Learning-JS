@@ -39,4 +39,4 @@ If a property or method isn’t found, JS looks “up the chain” in the protot
 
 ---
 
-**Please access all the codes from today from [`prototypes.js`](.prototypes.js).**
+**Please access all the codes from today from [`prototypes.js`](./prototypes.js).**
