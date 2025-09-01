@@ -47,6 +47,13 @@ deepCopy.playerProfile.Strengths[1] = "Trickery";
 console.log(deepCopy.playerProfile.Strengths);
 console.log(person.playerProfile.Strengths); // original untouched
 
+//Object accessing keys, values, entries and using hasOwn
+const player = { name: "Max", club: "Madrid" };
+console.log(Object.keys(player))
+console.log(Object.values(player))
+console.log(Object.entries(player))
+console.log(Object.hasOwnProperty("coach"))
+
 // 3️⃣ Merge defaults safely without mutation
 function mergeSettingsWithDefaults(defaults, user) {
   const result = structuredClone(defaults);
