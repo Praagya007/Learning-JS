@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 13 — Events, Forms & Delegation</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.5; }
+    section { margin-bottom: 30px; }
+    h2 { border-bottom: 2px solid #333; padding-bottom: 5px; }
+    small { color: red; display: block; margin-top: 2px; font-size: 0.9em; }
+    input, button { margin: 5px 0; padding: 5px; }
+  </style>
+</head>
+<body>
+  <section>
+    <h2>Button with Event Object</h2>
+    <button id="clickBtn">Click Me</button>
+  </section>
+
+  <section>
+    <h2>Bubbling vs Capturing</h2>
+    <div id="parentDiv" style="width:150px;height:150px;background:red;margin-top:10px;">
+      Parent Div
+      <button id="childBtn">Child Button</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Delegated Event List</h2>
+    <ul id="groceryList">
+      <li>Coffee</li>
+      <li>Sugar</li>
+      <li>Salt</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Form Validator</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email">
+      <small id="emailError"></small>
+      <input type="password" id="password" placeholder="Password">
+      <small id="passwordError"></small>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Keyboard Shortcut</h2>
+    <input type="text" id="searchBox" placeholder="Press / to focus">
+  </section>
+
+  <script>
+    // Button Event Object
+    const clickBtn = document.getElementById("clickBtn");
+    clickBtn.addEventListener("click", (event) => {
+      console.log("Event Type:", event.type);
+      console.log("Event Target:", event.target);
+      console.log("Button clicked successfully!");
+    });
+
+    // Bubbling vs Capturing
+    const parentDiv = document.getElementById("parentDiv");
+    const childBtn = document.getElementById("childBtn");
+
+    parentDiv.addEventListener("click", () => {
+      console.log("Parent div clicked (capturing)");
+    }, true); // capturing
+
+    childBtn.addEventListener("click", () => {
+      console.log("Child button clicked (bubbling)");
+    });
+
+    // Event Delegation
+    const groceryList = document.getElementById("groceryList");
+    groceryList.addEventListener("click", (e) => {
+      if(e.target.tagName === "LI") console.log("Clicked item:", e.target.textContent);
+    });
+
+    // Form Validator
+    const loginForm = document.getElementById("loginForm");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let valid = true;
+
+      if(!email.value.includes("@")) {
+        emailError.textContent = "Email must contain @";
+        valid = false;
+      } else { emailError.textContent = ""; }
+
+      if(password.value.length < 6) {
+        passwordError.textContent = "Password must be at least 6 chars";
+        valid = false;
+      } else { passwordError.textContent = ""; }
+
+      if(valid) console.log("Form valid!", { email: email.value, password: password.value });
+    });
+
+    // Keyboard Shortcut
+    const searchBox = document.getElementById("searchBox");
+    document.addEventListener("keydown", (e) => {
+      if(e.key === "/") {
+        e.preventDefault();
+        searchBox.focus();
+      }
+    });
+  </script>
+</body>
+</html>
