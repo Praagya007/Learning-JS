@@ -129,7 +129,11 @@ function handleDecimal() {
 }
 }
 function Calculate(){
+  const divideByZero=/\/\s*0+(?!\d)/; //Regex to check if divide by 0 is here or not.
   try{
+    if (divideByZero.test(expression)){ //Testing whether the condition's true or not.
+    throw new Error("Error.");
+    }
     expression=eval(expression).toString();
     justCalculated = true;
   }
