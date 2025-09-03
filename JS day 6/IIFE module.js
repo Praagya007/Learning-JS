@@ -26,6 +26,6 @@ let a=Number(prompt("Enter first number: "));
 let b=Number(prompt("Enter second number: "));
 console.log(mathModule.add(a,b));
 console.log(mathModule.subtract(a,b));
-console.log(mathModule.divide(a,b))
-console.log(mathModule.multiply(a,b))
+console.log(mathModule.divide(a,b));
+console.log(mathModule.multiply(a,b));
 

@@ -95,7 +95,7 @@ introduce.apply(user2, ["Beijing", "China"]);
 
 ### bind
 
-- Does not call immediately, returns a new function we can call later.
+- Does not call immediately, returns a new function we can call later. Needs to be stored in a variable.
 ```javascript
 let introLater = introduce.bind(user3, "Athens", "Greece");
 introLater();

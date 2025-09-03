@@ -15,7 +15,7 @@ let userInfo = introduce.bind(user3, "Edgebaston", "England");
 userInfo();
 
 // ---------------------
-// Fun Exercise with call/apply/bind
+// Fun Exercise using call/apply/bind
 // ---------------------
 function sayHello(greeting) {
     console.log(`${greeting}, I am ${this.name}`);
